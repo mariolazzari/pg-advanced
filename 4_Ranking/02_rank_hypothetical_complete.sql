@@ -4,6 +4,6 @@ from public.people_heights
 order by height_inches desc;
 
 select gender,
-rank(70) within group (order by height_inches desc)
+    rank(70) within group (order by height_inches desc)
 from public.people_heights
 group by rollup (gender);
